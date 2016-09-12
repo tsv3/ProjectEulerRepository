@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AppEuler
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Int64 answer = 0;
 
             Console.Write("Task1: Find the sum of all the multiples of multiplesNumber1 or multiplesNumber2 below belowNumber.\n");
-            answer = SmallestMultiple(1, 20);
+            answer = SumMultiplesBelow(3, 5, 1000); 
             if (answer > 0)
                 Console.Write("Found the sum is {0}\n", answer);
 
@@ -23,7 +23,7 @@ namespace AppEuler
                 Console.Write("Found the sum is {0} \n", answer);
 
             Console.Write("Task3: Find the smallest positive number that is evenly divisible by all of the numbers from number1 to number2.\n");
-            answer = SumMultiplesBelow(3, 5, 1000);
+            answer = SmallestMultiple(1, 20);
             if (answer > 0)
                 Console.Write("Smallest positive number is {0}\n", answer);
 
@@ -38,7 +38,7 @@ namespace AppEuler
         /// <param name="multiplesNumber1">multiple of number 1</param>
         /// <param name="multiplesNumber2">multiple of number 2</param>
         /// <param name="belowNumber">Natural number, below which is found the sum of all the multiples.</param>
-        static int SumMultiplesBelow(int multiplesNumber1, int multiplesNumber2, int belowNumber)
+        public static int SumMultiplesBelow(int multiplesNumber1, int multiplesNumber2, int belowNumber)
         {
             int sum = 0;
 
@@ -71,7 +71,7 @@ namespace AppEuler
         /// Find the sum of the even-valued terms in the Fibonacci sequence whose values do not exceed limit
         /// </summary>
         /// <param name="limit">Value that  do not exceed Fibonacci sequence</param>
-        static Int64 EvenFibonacciNumbers(Int64 limit)
+        public static Int64 EvenFibonacciNumbers(Int64 limit)
         {
             Int64 x = 1, y = 2, sum;
             Int64 evensum = 2;
@@ -108,7 +108,7 @@ namespace AppEuler
         /// </summary>
         /// <param name="number1">First number</param>
         /// <param name="number2">Second number</param>
-        static int SmallestMultiple(int number1, int number2)
+        public static int SmallestMultiple(int number1, int number2)
         {
             int i = number2;
 
